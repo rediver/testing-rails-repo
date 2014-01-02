@@ -1,4 +1,9 @@
-Mebay::Application.routes.draw do
+Mebay::Application.routes.draw do 
+  
+  resources 'ads'
+  
+  match '/ads/:id', :to => 'ads#show'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
