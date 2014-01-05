@@ -1,0 +1,7 @@
+<h1>All ads</h1>
+
+<ul>
+  <% for ad in @ads %>
+  <li><%= link_to ad.name, ads_path %></li>
+  <% end %>
+</ul>  
