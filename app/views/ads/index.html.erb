@@ -2,6 +2,6 @@
 
 <ul>
   <% for ad in @ads %>
-  <li><%= link_to ad.name, ads_path %></li>
+  <li><a href="/ads/<%= ad.id %>"><%= ad.name %></a></li>
   <% end %>
 </ul>  

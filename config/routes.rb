@@ -4,6 +4,7 @@ Mebay::Application.routes.draw do
   match '/ads/:id', :to => 'ads#show'
   match '/ads/', :to => 'ads#index'
   root to: 'ads#index'
+  match '/ads/new/', :to => 'ads#new'
   
   resources 'sellers'
   match '/sellers/', :to => 'sellers#index'

@@ -1,5 +1,14 @@
 class AdsController < ApplicationController
 
+  def new
+    @ad = Ad.new
+  end
+  
+  def create 
+    @ad = Ad.new(params[:ad])
+    @ad.save
+  end
+  
   def index  
     @ads = Ad.find(:all)
   end 
@@ -8,14 +17,8 @@ class AdsController < ApplicationController
     @ad = Ad.find(params[:id]) 
   end
   
-  def new 
-  end
-  
   def edit
   end  
-  
-  def create 
-  end
   
   def update 
   end
